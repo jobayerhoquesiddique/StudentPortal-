@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment History</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="register.html">Add Student</a>
+        <a href="list.html">Student List</a>
+        <a href="enroll.html">Enroll in Course</a>
+        <a href="history.html">Enrollment History</a>
+    </nav>
+    <div class="container">
+        <h1>Enrollment History</h1>
+        <form id="historyForm" action="history.php" method="GET">
+            <label for="student_id">Student ID</label>
+            <input type="text" id="student_id" name="student_id" aria-required="true">
+            <button type="submit">Search</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Title</th>
+                    <th>Semester</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody id="historyTable">
+                <!-- Populated by history.php -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

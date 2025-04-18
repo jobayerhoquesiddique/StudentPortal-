@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Enrollment</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="register.html">Add Student</a>
+        <a href="list.html">Student List</a>
+        <a href="enroll.html">Enroll in Course</a>
+        <a href="history.html">Enrollment History</a>
+    </nav>
+    <div class="container">
+        <h1>Enroll in a Course</h1>
+        <form id="enrollmentForm" action="enroll.php" method="POST">
+            <label for="student_id">Student ID *</label>
+            <input type="text" id="student_id" name="student_id" aria-required="true">
+            <div class="error" id="studentIdError"></div>
+
+            <label for="course_code">Course Code *</label>
+            <input type="text" id="course_code" name="course_code" aria-required="true">
+            <div class="error" id="courseCodeError"></div>
+
+            <label for="course_title">Course Title</label>
+            <input type="text" id="course_title" name="course_title">
+
+            <label for="semester">Semester</label>
+            <select id="semester" name="semester">
+                <option value="">Select Semester</option>
+                <option value="Fall 2025">Fall 2025</option>
+                <option value="Spring 2026">Spring 2026</option>
+                <option value="Summer 2026">Summer 2026</option>
+            </select>
+
+            <button type="submit">Enroll</button>
+        </form>
+        <div class="success" id="successMessage"></div>
+    </div>
+    <script src="js/enroll.js"></script>
+</body>
+</html>

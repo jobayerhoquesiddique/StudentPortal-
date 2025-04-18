@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="register.html">Add Student</a>
+        <a href="list.html">Student List</a>
+        <a href="enroll.html">Enroll in Course</a>
+        <a href="history.html">Enrollment History</a>
+    </nav>
+    <div class="container">
+        <h1>Register New Student</h1>
+        <form id="registrationForm" action="register.php" method="POST">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" aria-required="true">
+            <div class="error" id="nameError"></div>
+
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" aria-required="true">
+            <div class="error" id="emailError"></div>
+
+            <label for="student_id">Student ID</label>
+            <input type="text" id="student_id" name="student_id">
+
+            <label for="department">Department</label>
+            <select id="department" name="department">
+                <option value="">Select Department</option>
+                <option value="CSE">CSE</option>
+                <option value="EEE">EEE</option>
+                <option value="BBA">BBA</option>
+            </select>
+
+            <label for="major">Major</label>
+            <select id="major" name="major">
+                <option value="">Select Major</option>
+                <option value="Software Engineering">Software Engineering</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Business Administration">Business Administration</option>
+            </select>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob">
+
+            <label for="address">Address</label>
+            <textarea id="address" name="address"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div class="success" id="successMessage"></div>
+    </div>
+    <script src="js/register.js"></script>
+</body>
+</html>
